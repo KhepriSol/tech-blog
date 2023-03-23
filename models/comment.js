@@ -13,13 +13,13 @@ Comment.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-      /** The unique identifier for the Comment */
+      
     },
     comment_text: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: { len: [1] },
-      /** The text content of the Comment */
+      
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -27,7 +27,7 @@ Comment.init(
       references: {
         model: "user",
         key: "id",
-        /** The user who created the Comment */
+        
       },
     },
     post_id: {
@@ -36,7 +36,7 @@ Comment.init(
       references: {
         model: "post",
         key: "id",
-        /** The Post that the Comment belongs to */
+        
       },
     },
   },

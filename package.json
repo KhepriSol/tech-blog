@@ -1,0 +1,31 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node seeds/seeds.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhepriSol/tech-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhepriSol/tech-blog/issues"
+  },
+  "homepage": "https://github.com/KhepriSol/tech-blog#readme",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "express-session": "^1.17.3",
+    "express-session-sequelize": "^2.3.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.29.3"
+  }
+}

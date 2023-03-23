@@ -22,7 +22,7 @@ const sess = {
 };
 //initialize the server
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3306;
 
 //middlewear
 app.use(express.json());
@@ -34,9 +34,13 @@ app.use(session(sess));
 app.use("/", controller);
 
 //set handlebars as render engine
-app.engine("handlebars", exphbs());
+app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
+});
+
+process.on('uncaughtException', function (err) {
+  console.log(err);
 });

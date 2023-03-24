@@ -1,7 +1,7 @@
 //handle editing the post
 async function editPostHandler(event) {
     event.preventDefault();
-    //get the post title and the text
+  
     const title = document.querySelector("#post-title").innerHTML;
     const body = document.querySelector("#post-body").innerHTML;
     const post_id = window.location.toString().split("/")[
@@ -14,7 +14,7 @@ async function editPostHandler(event) {
   //handle deleting the post
   async function deletePostHandler(event) {
     event.preventDefault();
-    //make request to post route delete with the current post id in nav bar
+    
     const post_id = window.location.toString().split("/")[
       window.location.toString().split("/").length - 1
     ];
@@ -25,11 +25,11 @@ async function editPostHandler(event) {
       },
     });
   
-    //check if all good
+    
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
-      alert(response.statusText); // find better way
+      alert(response.statusText); 
     }
   }
   

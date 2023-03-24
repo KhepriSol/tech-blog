@@ -1,7 +1,7 @@
 // Import the User, Post, and Comment models
-const User = require('./User');
-const Post = require('./Post');
-const Comment = require('./Comment');
+const User = require('./users');
+const Post = require('./post');
+const Comment = require('./comment');
 
 // Define the relationships between the models
 // A User has many Posts, with a foreign key of user_id
@@ -40,3 +40,4 @@ module.exports = {
     Post,
     Comment
 };
+
